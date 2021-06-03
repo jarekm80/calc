@@ -1,1 +1,0 @@
-export const ADD_DIGIT_TO_NUM_1 = 'AddDigitToNum1';

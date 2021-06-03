@@ -1,5 +1,8 @@
-import store from './store';
-import {AddDigitToNum1} from './actions';
+import configureStore from './store/configureStore';
+import {AddDigitToNum1, AddDigitToNum2} from './store/nums';
+
+const store = configureStore();
+
 const unsubscribe = store.subscribe(() => {
     console.log('Store changed', store.getState());
 });
@@ -7,21 +10,4 @@ const unsubscribe = store.subscribe(() => {
 store.dispatch(AddDigitToNum1('7'));
 store.dispatch(AddDigitToNum1('6'));
 
-/*
-store.dispatch({
-    type: ADD_DIGIT_TO_NUM_1,
-    payload: {
-        digit : '2'
-    }
-});
-
-unsubscribe();
-
-store.dispatch({
-    type: 'AddDigitToNum1',
-    payload: {
-        digit : '3'
-    }
-});
-*/
-//console.log(store.getState());
+store.dispatch(AddDigitToNum2('3'));

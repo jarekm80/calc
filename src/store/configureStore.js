@@ -1,7 +1,6 @@
 import {createStore} from 'redux';
 import reducer from './nums';
-
-const initialState = {num1 : '', num2 : '' };
+import initialState from './initialState';
 
 
 export default function configureStore(){
